@@ -1,2 +1,2 @@
 # Pokemon-Team-Generator
-Pokemon team generator using PokéAPI
+Pokémon team generator using PokéAPI and Node.js with caching
