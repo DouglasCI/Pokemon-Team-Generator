@@ -10,11 +10,7 @@ const pokemonList = new NodeCache({ deleteOnExpire: false }),
       alreadyFetchedList = new NodeCache({ stdTTL: 120, checkperiod: 150 }),
       teamSize = 6;
 
-app.get("/", (req, res) => {
-  res.render("index.ejs");
-});
-
-app.get("/generate", async (req, res) => {
+app.get("/api", async (req, res) => {
   let generatedTeam = [],
       promises = [];
 
@@ -47,6 +43,7 @@ app.get("/generate", async (req, res) => {
       const cachedPokemon = alreadyFetchedList.get(id);
 
       generatedTeam.push({
+        id: id,
         name: __formatName(cachedPokemon.name),
         spriteURL: cachedPokemon.spriteURL,
       });
@@ -70,6 +67,7 @@ app.get("/generate", async (req, res) => {
         }
 
         generatedTeam.push({
+          id: id,
           name: __formatName(name),
           spriteURL: spriteURL,
         });
@@ -80,7 +78,7 @@ app.get("/generate", async (req, res) => {
       res.status(500);
     });
 
-  res.render("index.ejs", { data: generatedTeam });
+  res.json({ data: generatedTeam });
 });
 
 app.listen(port, () => {

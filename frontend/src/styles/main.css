@@ -1,0 +1,81 @@
+/* ------------------ Backgrounds ------------------ */
+body {
+  background: url("../assets/pokeball_bg.jpg") repeat;
+  background-size: 15%;
+  animation: bg-animation 120s linear infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: 0 50%;;
+  }
+  100% {
+    background-position: 150% 50%;
+  }
+}
+
+.bg-diamonds {
+  background-color: #fdfdfd;
+  background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+}
+
+.bg-absurdity {
+  background-color: #21386E;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+}
+
+/* ------------------ Fonts ------------------ */
+.noto-sans-jp-regular {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.noto-sans-jp-bold {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.noto-sans-jp-black {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fs-sm {
+  font-size: 14px;
+}
+
+.header {
+  color: #FFDE00;
+  border-color: #3B4CCA;
+  text-shadow: 3px 0px 0 #3B4CCA, -3px 0px 0 #3B4CCA, 0px 3px 0 #3B4CCA, 0px -3px 0 #3B4CCA;
+  text-align: center;
+}
+
+/* ------------------ Buttons ------------------ */
+.button {
+  border-radius: 8px;
+  border-width: 2px;
+  color: whitesmoke;
+  background-color: #FF0000;
+}
+
+.button-lg {
+  width: 250px;
+  font-size: 25px;
+}
+
+.button-sm {
+  width: 170px;
+  font-size: 18px;
+}
+
+.button:hover {
+  color: #FF0000;
+  background-color: whitesmoke;
+}
